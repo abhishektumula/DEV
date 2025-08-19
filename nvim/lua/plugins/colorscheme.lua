@@ -1,3 +1,4 @@
+
 return {
   -- 1. Tokyo Night
   {
@@ -120,68 +121,6 @@ return {
     end,
   },
 
-  -- 6. Gruvbox
-  {
-    "ellisonleao/gruvbox.nvim",
-    name = "gruvbox",
-    priority = 1000,
-    lazy = true,
-    opts = {
-      transparent_mode = true,
-      terminal_colors = true,
-      overrides = {
-        NvimTreeNormal = { bg = "none" },
-        NvimTreeNormalNC = { bg = "none" },
-        NvimTreeEndOfBuffer = { bg = "none" },
-        NvimTreeWinSeparator = { fg = "#3b4261", bg = "none" },
-      },
-    },
-    config = function(_, opts)
-      require("gruvbox").setup(opts)
-    end,
-  },
-
-  -- 7. Everforest
-  {
-    "sainnhe/everforest",
-    name = "everforest",
-    priority = 1000,
-    lazy = true,
-    config = function()
-      vim.g.everforest_background = 'hard'
-      vim.g.everforest_transparent_background = 1
-      vim.cmd("colorscheme everforest")
-      vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "none" })
-      vim.api.nvim_set_hl(0, "NvimTreeNormalNC", { bg = "none" })
-      vim.api.nvim_set_hl(0, "NvimTreeEndOfBuffer", { bg = "none" })
-      vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", { fg = "#3b4261", bg = "none" })
-    end,
-  },
-
-  -- 8. Kanagawa
-  {
-    "rebelot/kanagawa.nvim",
-    name = "kanagawa",
-    priority = 1000,
-    lazy = true,
-    opts = {
-      compile = false,
-      transparent = true,
-      theme = "wave", -- wave, dragon, lotus
-      overrides = function(colors)
-        return {
-          NvimTreeNormal = { bg = "none" },
-          NvimTreeNormalNC = { bg = "none" },
-          NvimTreeEndOfBuffer = { bg = "none" },
-          NvimTreeWinSeparator = { fg = colors.sumiInk4, bg = "none" },
-        }
-      end,
-    },
-    config = function(_, opts)
-      require("kanagawa").setup(opts)
-    end,
-  },
-
   -- 9. Nord
   {
     "shaunsingh/nord.nvim",
@@ -199,6 +138,8 @@ return {
   },
 
   -- 10. Moonfly
+  -- this is good, but i dont use it anyways 
+  -- it's just there incase if i want to use it
   {
     "bluz71/vim-moonfly-colors",
     name = "moonfly",
@@ -214,4 +155,3 @@ return {
     end,
   },
 }
-

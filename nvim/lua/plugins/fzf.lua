@@ -13,7 +13,7 @@ return {
     })
 
     -- Map <leader>m to fzf file finder in normal mode
-    vim.keymap.set("n", "<leader>m", fzf.files, { desc = "Find Files (fzf)" })
+    vim.keymap.set("n", "<leader>M", fzf.files, { desc = "Find Files (fzf)" })
   end,
 }
 

@@ -1,10 +1,17 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
+
+
+
+
+
+
+
 require("config.lazy")
 vim.cmd("hi CursorLine gui=NONE guibg=NONE")
 vim.opt.shiftwidth = 2
 vim.opt.background = "dark" -- make sure the theme is in dark mode
 vim.opt.cmdheight = 1 
--- Universal transparency overrides
+--Universal transparency overrides
 local transparent_groups = {
   "Normal",
   "NormalNC",
@@ -24,8 +31,8 @@ local transparent_groups = {
   "NvimTreeWinSeparator",
   "Pmenu",
   "PmenuSel",
-  "StatusLine",
-  "StatusLineNC",
+  --"StatusLine",
+  --"StatusLineNC",
   "WinSeparator",
   "MsgArea",
   "WhichKeyFloat",

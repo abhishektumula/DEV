@@ -12,3 +12,4 @@
 -- ~/.config/nvim/lua/custom/keymaps.lua
 -- Map <leader>e to open netrw (Ex)
 
+--vim.keymap.set("n", "<leader>m", vim.cmd.Ex, { desc = "Find Files (fzf)" })
