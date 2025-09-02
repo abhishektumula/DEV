@@ -1,0 +1,72 @@
+
+ 
+{
+  "layer": "top",
+  "position": "top",
+  "height": 40,
+  "margin": "5 30 5 30",
+  "spacing": 5,
+  "modules-left": ["hyprland/workspaces",  "cpu", "memory"],
+  "modules-center": ["clock"],
+  "modules-right": ["custom/bluetooth", "tray", "backlight", "battery", "pulseaudio", "custom/power"],
+
+  "hyprland/workspaces": {
+    "format": "{name}: {icon}",
+    "format-icons": {"active": "", "default": ""},
+    "on-click": "activate",
+    "all-outputs": true,
+    "sort-by-number": true,
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1"
+  },
+
+  "clock": {
+    "format": "{:%H:%M %d,%b}",
+    "tooltip-format": "<big>{:%A, %d %B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+    "interval": 60
+  },
+
+  "cpu": {"format": " {usage}%", "on-click": "foot -e htop"},
+  "memory": {"format": " {: >3}%", "on-click": "foot -e htop"},
+  "backlight": {
+    "format": "{icon} {percent: >3}%",
+    "format-icons": ["󰃝", "󰃞"],
+    "on-scroll-down": "brightnessctl -c backlight set 1%-",
+    "on-scroll-up": "brightnessctl -c backlight set +1%"
+  },
+  "battery": {
+    "interval" : 5, 
+    "format": "{icon} {capacity: >3}%",
+    "format-icons": ["󰂎","󰁻","󰁽","󰁿","󰂁"],
+    "charging-format": "{icon} Charging {capacity: >3}%",
+    "charging-format-icons": ["󰂄"], 
+    "format-charging" : "{icon} charging {capacity: >3}%"
+
+  },
+  "network": {
+    "format": "{ifname}: {ipaddr}",
+    "format-wifi": "󰤨 {essid}",
+    "format-disconnected": "󰈂 Disabled",
+    "tooltip-format-wifi": "󰤨  {ifname} @ {essid}\nIP: {ipaddr}\nSignal: {signalStrength}%",
+    "on-click": "nm-connection-editor"
+  },
+  "custom/bluetooth": {"format": "󰂯", "exec": "bluetoothctl show | grep Powered", "on-click": "blueman-manager", "tooltip": false},
+  "pulseaudio": {
+    "scroll-step": 3,
+    "format": "{icon} {volume}%",
+    "format-muted": " muted",
+    "format-icons": {"headphone": "","default":["","",""]},
+    "on-click": "pavucontrol"
+  },
+  "tray": {"icon-size": 20, "spacing": 5},
+  "custom/power": {"format": "⏻", "on-click": "nwgbar", "tooltip": false}
+}
+
+
+
+
+
+
+
+
+
