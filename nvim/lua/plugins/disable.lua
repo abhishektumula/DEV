@@ -5,7 +5,7 @@ return {
 
   -- Disable indent guides
   { "lukas-reineke/indent-blankline.nvim", enabled = false },
-  { "echasnovski/mini.indentscope", enabled = false },
+  { "nvim-mini/mini.indentscope", enabled = false },
 
   -- Optional: disable LazyVim's Snacks dashboard too
   {

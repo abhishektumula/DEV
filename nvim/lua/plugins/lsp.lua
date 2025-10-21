@@ -1,16 +1,17 @@
+
 return {
   -- Mason: manage LSPs, DAPs, linters
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     build = ":MasonUpdate",
     config = true,
   },
 
   -- Mason-LSPConfig: bridge mason and nvim-lspconfig
   {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     dependencies = {
-      "williamboman/mason.nvim",
+      "mason-org/mason.nvim",
       "neovim/nvim-lspconfig",
     },
     config = function()
@@ -19,14 +20,11 @@ return {
         ensure_installed = {
           "html",
           "cssls",
-          "jdtls",
-          "emmet_ls",
+          "tsserver",   -- JS/TS/React/Next.js
+          "pyright",    -- Python
+          "gopls",      -- Go
           "tailwindcss",
-          "pyright",     -- Python
-          "ts_ls",    -- JavaScript, TypeScript
-          "html",        -- HTML
-          "cssls",       -- CSS
-          "gopls",       -- Go
+          "eslint",     -- Linter for JS/TS
         },
         automatic_installation = true,
       })
@@ -49,10 +47,12 @@ return {
       -- Setup individual servers
       local servers = {
         pyright = {},
-        tsserver = {},
+        tsserver = {},   -- JS/TS/React/Next.js
         html = {},
         cssls = {},
         gopls = {},
+        eslint = {},     -- Linter
+        tailwindcss = {},
       }
 
       for name, config in pairs(servers) do
@@ -62,4 +62,12 @@ return {
     end,
   },
 }
+
+
+
+
+
+
+
+
 
