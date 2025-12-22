@@ -1,3 +1,4 @@
+
 return {
   -- Mason: manage LSPs, DAPs, linters
   {

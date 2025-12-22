@@ -20,7 +20,7 @@ return {
         ensure_installed = {
           "html",
           "cssls",
-          "ts_ls",   -- JS/TS/React/Next.js
+          "tsserver",   -- JS/TS/React/Next.js
           "pyright",    -- Python
           "gopls",      -- Go
           "tailwindcss",
