@@ -1,4 +1,3 @@
-
 return {
   -- Disable the dashboard
   { "goolord/alpha-nvim", enabled = false },
@@ -15,12 +14,3 @@ return {
     },
   },
 }
-
-
-
-
-
-
-
-
-

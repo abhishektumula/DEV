@@ -12,6 +12,10 @@ return {
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
 
+  {
+    "adisen99/apprentice.nvim",
+    lazy = true,
+  },
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
@@ -124,7 +128,6 @@ return {
         "html",
         "javascript",
         "json",
-        "python",
         "lua",
         "markdown",
         "markdown_inline",
@@ -178,14 +181,14 @@ return {
   },
 
   -- use mini.starter instead of alpha
-  -- { import = "lazyvim.plugins.extras.ui.mini-starter" },
+  { import = "lazyvim.plugins.extras.ui.mini-starter" },
 
   -- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
   { import = "lazyvim.plugins.extras.lang.json" },
 
   -- add any tools you want to have installed below
   {
-    "mason-org/mason.nvim",
+    "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
         "stylua",
@@ -196,12 +199,3 @@ return {
     },
   },
 }
-
-
-
-
-
-
-
-
-
