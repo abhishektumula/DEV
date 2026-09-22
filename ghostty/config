@@ -1,7 +1,8 @@
 
-theme = TokyoNight Night
+theme = Rose pine
 background-blur = true
-background-opacity = 0.75
+background-blur= 20
+background-opacity = 0.6
 background = #000000
 
 #font-family = "GeistMono Nerd Font"

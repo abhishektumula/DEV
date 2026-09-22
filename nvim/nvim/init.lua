@@ -1,7 +1,7 @@
 require("config.lazy")
 
 -- colorscheme gets applied here
-vim.cmd.colorscheme("tokyonight")
+vim.cmd.colorscheme("rose-pine")
 
 -- line numbers and relative line numbers
 vim.opt.number = true
